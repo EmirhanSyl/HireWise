@@ -155,7 +155,7 @@ public class LoginPanel extends javax.swing.JPanel implements IPage {
                     if (position_title.equals("HR")) {
                         account_type = "hirewise_hr";
                         MainFrame.instance.setEmployee(emp);
-                        page = MainFrame.instance.getDepartmentPage();
+                        page = MainFrame.instance.getProfilePage();
                     } else {
                         account_type = "hirewise_user";
                         page = MainFrame.instance.getProfilePage();

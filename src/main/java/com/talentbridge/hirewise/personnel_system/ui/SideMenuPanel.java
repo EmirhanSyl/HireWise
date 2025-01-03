@@ -143,8 +143,14 @@ public class SideMenuPanel extends javax.swing.JPanel {
     }
 
     private void hirewiseHRList() {
-        testList();
+        cCSideMenuList1.removeAllItems();
         
+
+        // 2) Profile
+        ImageIcon iconProfile = new ImageIcon(ImageLib.getUserIconPath());
+        Image imgFitProfile = iconProfile.getImage().getScaledInstance(25, 25, Image.SCALE_AREA_AVERAGING);
+        iconProfile.setImage(imgFitProfile);
+        cCSideMenuList1.addItem(new Item("Profile", iconProfile, MainFrame.instance.getProfilePage()));
 
         //------------ HR Job Posts -------------
         ImageIcon icon2 = new ImageIcon(ImageLib.getPositionIconPath());
@@ -159,7 +165,7 @@ public class SideMenuPanel extends javax.swing.JPanel {
         cCSideMenuList1.addItem(new Item("Applications", icon3, MainFrame.instance.getHRApplicationPage()));
         
         
-        
+        cCSideMenuList1.setSelectedIndex(0);
 
     }
 
@@ -167,10 +173,10 @@ public class SideMenuPanel extends javax.swing.JPanel {
         cCSideMenuList1.removeAllItems();
 
         //------------ Home -------------
-        ImageIcon icon = new ImageIcon(ImageLib.getHomeIconPath());
-        Image imgFit = icon.getImage().getScaledInstance(25, 25, Image.SCALE_AREA_AVERAGING);
-        icon.setImage(imgFit);
-        cCSideMenuList1.addItem(new Item("Home", icon, MainFrame.instance.getHomePage()));
+//        ImageIcon icon = new ImageIcon(ImageLib.getHomeIconPath());
+//        Image imgFit = icon.getImage().getScaledInstance(25, 25, Image.SCALE_AREA_AVERAGING);
+//        icon.setImage(imgFit);
+//        cCSideMenuList1.addItem(new Item("Home", icon, MainFrame.instance.getHomePage()));
 
         //------------ Profile -------------
         ImageIcon icon2 = new ImageIcon(ImageLib.getUserIconPath());
@@ -191,7 +197,7 @@ public class SideMenuPanel extends javax.swing.JPanel {
         cCSideMenuList1.addItem(new Item("Create CV", icon5, MainFrame.instance.getCVPage()));
         
 
-        cCSideMenuList1.setSelectedIndex(1);
+        cCSideMenuList1.setSelectedIndex(0);
 
         //------------ Applications -------------
         ImageIcon icon6 = new ImageIcon(ImageLib.getApplicationsIconPath());
